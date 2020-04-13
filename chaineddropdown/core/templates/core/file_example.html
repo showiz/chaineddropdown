@@ -1,7 +1,7 @@
 {% extends 'core/base.html' %}
 
 {% block content %}
-Here you can see that a subject can have many teachers, and a teacher can have many subjects. So, teachers can repeat in others subjects.
+Here you can see that a subject can have many teachers, and a teacher can have many subjects. So, teachers can repeat themselves in others subjects.
 <body>
     <form method="post" id="FileForm" data-teachers-url="{% url 'ajax_load_teachers' %}" enctype="multipart/form-data">
         {{form.as_p}}
