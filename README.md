@@ -19,4 +19,7 @@ Step6) Create a HTML form in wich we will use AJAX to make the calls ---------> 
 * The ForeignKey example is an upgrade for the example in 
 https://simpleisbetterthancomplex.com/tutorial/2018/01/29/how-to-implement-dependent-or-chained-dropdown-list-with-django.html
 
-* The ManyToMany example is a propety of Héctor Valdés for free use. 
+* The ManyToMany example is a propety of Héctor Valdés (showiz) for free use. 
+
+* See the project in: 
+https://swzdropdown.pythonanywhere.com/
