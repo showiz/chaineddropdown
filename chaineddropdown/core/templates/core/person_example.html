@@ -1,0 +1,31 @@
+{% extends 'core/base.html' %}
+
+{% block content %}
+Here you can see that a city can only have one country. That means, each country never repeats a city.
+<body>
+    <form method="post" id="PersonForm" data-cities-url="{% url 'ajax_load_cities' %}" enctype="multipart/form-data">
+        {{form.as_p}}
+        <div class="text-center">
+            <button type="submit" form="#PersonForm" class="btn btn-primary btn-block" value="submit">Add person</button>
+        </div>
+    </form>
+</body>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script>
+  $("#id_country").change(function () {
+    var url = $("#PersonForm").attr("data-cities-url");
+    var countryId = $(this).val();
+
+    $.ajax({
+      url: url,
+      data: {
+        'country': countryId
+      },
+      success: function (data) {
+        $("#id_city").html(data);
+      }
+    });
+
+  });
+</script>
+{% endblock %}

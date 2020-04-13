@@ -1,0 +1,35 @@
+{% extends 'core/base.html' %}
+
+{% block content %}
+Here you can see that a subject can have many teachers, and a teacher can have many subjects. So, teachers can repeat in others subjects.
+<body>
+    <form method="post" id="FileForm" data-teachers-url="{% url 'ajax_load_teachers' %}" enctype="multipart/form-data">
+        {{form.as_p}}
+        <div class="text-center">
+            <button type="submit" form="#FileForm" class="btn btn-primary btn-block" value="submit">Download File</button>
+        </div>
+    </form>
+</body>
+
+<div style="padding-top: 20px; font-size: 0.8rem;">
+    <p>Created by Héctor Valdés P. using AJAX and DJANGO 3.0</p>
+</div>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script>
+  $("#id_subject").change(function () {
+    var url = $("#FileForm").attr("data-teachers-url");
+    var subjectId = $(this).val();
+
+    $.ajax({
+      url: url,
+      data: {
+        'subject': subjectId
+      },
+      success: function (data) {
+        $("#id_teacher").html(data);
+      }
+    });
+
+  });
+</script>
+{% endblock %}
