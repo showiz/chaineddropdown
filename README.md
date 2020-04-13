@@ -8,12 +8,12 @@ Here I present two kind of examples for different situations.
 
 In both examples the steps to follow are:
 
-Step1) Create a CreateView (class) in Views.py --------> (PersonView and FileView)
-Step2) Create a function to call the chained dropdown (def) in Views.py --------> (load_cities and load_teachers)
-Step3) Indicate the urls for the CreateView and for the load functions in urls.py --------> (PersonView|FileView and load_cities|load_teachers)
-Step4) Create a form filtered for both cases in forms.py --------> (PersonForm and FileForm)
-Step5) Create a HTML for the dropdown load ---------> (dropdowncities.html and dropdownteachers.html)
-Step6) Create a HTML form in wich we will use AJAX to make the calls ---------> (person_example.html and file_example.html)
+Step 1) Create a CreateView (class) in Views.py --------> (PersonView and FileView)
+Step 2) Create a function to call the chained dropdown (def) in Views.py --------> (load_cities and load_teachers)
+Step 3) Indicate the urls for the CreateView and for the load functions in urls.py --------> (PersonView|FileView and load_cities|load_teachers)
+Step 4) Create a form filtered for both cases in forms.py --------> (PersonForm and FileForm)
+Step 5) Create a HTML for the dropdown load ---------> (dropdowncities.html and dropdownteachers.html)
+Step 6) Create a HTML form in wich we will use AJAX to make the calls ---------> (person_example.html and file_example.html)
 
 
 * The ForeignKey example is an upgrade for the example in 
