@@ -2,6 +2,8 @@
 Two examples of chained dropdown [ForeingKey and ManyToMany]
 Using AJAX and Django 3.0
 
+------YOU MUST PUT THE INFO IN DATABASE-----
+
 Here I present two kind of examples for different situations.
 1) Person example: Who has to fill a form with the options 'Country' and 'City'
 2) File example: For those who need to download a file for a selecting a 'Subject' and a 'Teacher'
